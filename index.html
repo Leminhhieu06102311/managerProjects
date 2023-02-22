@@ -60,7 +60,7 @@
           db.collection("overview")
             .get()
             .then((querySnapshot) => {
-              const parentOverview = $('.content__overview').get(0)
+              const parentOverview = document.querySelector('.content__overview')
               querySnapshot.forEach((doc) => {
                 parentOverview.innerHTML = `
         <div class="overview__item overview__item--total">
