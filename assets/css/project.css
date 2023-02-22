@@ -1,0 +1,308 @@
+.project__heading div {
+  display: flex;
+  align-items: center;
+}
+.project__heading div h3 {
+  margin-right: 2rem;
+  font-size: 1.8rem;
+}
+.button,
+.project__heading div button {
+  font-size: 14px;
+  background: var(--primary-color);
+  border-width: 0px;
+  border-style: solid;
+  color: #fff;
+  display: inline-flex;
+  cursor: pointer;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0px 20.5px;
+  height: 44px;
+  font-weight: 600;
+  box-shadow: 0px 0px;
+}
+.button svg {
+  margin-right: .5rem;
+}
+.project__heading div button svg {
+  margin-right: .5rem;
+}
+.project__heading div button:hover {
+  background-color: rgb(103, 38, 168);
+  color: #fff;
+  cursor: pointer;
+}
+.update-account,
+.delete-account,
+.show-atm {
+  color: var(--text-color);
+  font-size: 1.3rem;
+  padding: .7rem 1.3rem;
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  font-weight: 500;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 0px 10px;
+  border: 1px solid rgb(227, 230, 239);
+  box-shadow: rgb(64 64 64 / 2%) 0px 3px 5px;
+  transition: all .2s ease;
+}
+.show-atm svg {
+    width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 6px;
+}
+.update-atm:hover,
+.delete-atm:hover,
+.update-account:hover,
+.delete-account:hover,
+.show-atm:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.input-password {
+  border: none;
+  font-size: 1.7rem;
+  color: var(--text-color);
+  background-color: #fff;
+}
+.button-password {
+  padding: 2rem;
+  cursor: pointer;
+}
+.modal h3 {
+  font-size: 1.8rem;
+}
+.modal-create-job,
+.modal-update-atm,
+.modal-create-atm,
+.modal-update-account,
+.modal-view-atm,
+.modal-create-project {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.modal-create-job .modal,
+.modal-update-atm .modal,
+.modal-create-atm .modal,
+.modal-update-account .modal,
+.modal-view-atm .modal,
+.modal-create-project .modal {
+  background-color: #fff;
+  width: 70rem;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.modal .close {
+  font-size: 1.5rem;
+    /* text-align: right; */
+    display: flex;
+    /* color: var(--text-color); */
+    cursor: pointer;
+    z-index: 10;
+    padding: 4rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal .heading {
+  font-size: 1.5rem;
+}
+.modal .heading::before {
+  color: #ff4d4f;
+  content: "*";
+  display: inline-block;
+  font-family: SimSun, sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  margin-right: 4px;
+}
+.modal .select-atm,
+.modal .select {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 1rem;
+  color: var(--text-color);
+  background-color: #ffff;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  border-color: var(--input-color-border) !important;
+  border: 1px solid;
+  align-items: center;
+  color: #666d92;
+  position: relative;
+}
+.modal .select p {
+  padding: 1.3rem;
+    font-size: 1.3rem;
+    width: 100%;
+}
+
+.modal .select svg {
+  margin-right: 1rem;
+}
+.modal input {
+  background-color: #fff;
+  border: 1px solid var(--input-color-border);
+  border-radius: 1rem;
+  color: #666d92;
+  margin: 2rem 0;
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 1.4rem;
+  transition: all 0.3s;
+  width: 100%;
+}
+input:focus,
+.modal input:focus {
+  box-shadow: 0px 0px 0px 2px rgb(130 49 211 / 20%);
+  outline: none;
+}
+.modal ul {
+  z-index: 100;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 1rem;
+  width: 100%;
+  top: 7.2rem;
+  visibility: hidden;
+  left: 0px;
+}
+.modal ul li {
+  padding: 2rem;
+  font-size: 1.4rem;
+}
+
+.modal ul li:hover {
+  background-color: var(--primary-color-hover);
+}
+.modal .select-modal.active {
+  visibility: visible;
+}
+.modal .select-modal.hidden {
+  visibility: hidden;
+}
+
+.modal-create-job.hidden-modal,
+.modal-update-atm.hidden-modal,
+.modal-create-atm.hidden-modal,
+.modal-update-account.hidden-modal,
+.modal-create-project.hidden-modal {
+  display: none;
+}
+.modal-view-atm.show-modal {
+  display: block;
+}
+.modal-view-atm.hidden-modal {
+  display: none;
+}
+
+.button-add-account {
+  cursor: pointer;
+}
+.table__body-atm td {
+  padding: 2rem;
+}
+.update-atm,
+.update-account {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  padding: .7rem 1.3rem;
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  font-weight: 500;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 0px 5px;
+  border: 1px solid rgb(227, 230, 239);
+  box-shadow: rgb(64 64 64 / 2%) 0px 3px 5px;
+}
+.update-atm svg,
+.update-account svg {
+  width: 18px;
+    height: 18px;
+    margin-right: 6px;
+}
+.delete-atm,
+.delete-account {
+  color: var(--danger-color);
+  font-size: 1.3rem;
+  padding: .7rem 1.3rem;
+  border-radius: 6px;
+  background: rgb(255, 255, 255);
+  font-weight: 500;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 0px 5px;
+  border: 1px solid rgb(227, 230, 239);
+  box-shadow: rgb(64 64 64 / 2%) 0px 3px 5px;
+}
+.delete-atm svg ,
+.delete-account svg {
+  width: 18px;
+    height: 18px;
+    margin-right: 6px;
+}
+.project__filter {
+  display: flex;
+  justify-content: space-between;
+}
+.project__filter .search__id {
+  display: flex;
+  align-items: center;
+}
+.search__id input {
+  margin: 0;
+}
+.project__filter .search__id label {
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+.search__input {
+  background-color: #fff;
+  border: 1px solid var(--input-color-border);
+  border-radius: 1rem;
+  color: #666d92;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.search__input input {
+  margin: 0;
+  min-width: 30rem;
+  padding: 0 1rem;
+  border: none;
+}
+.search__input svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  color: var(--text-color);
+}
+.search__input input:focus {
+  box-shadow: none;
+}
